@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Welcome Screen -->
+<div id="welcome" class="welcome-screen">
+    <div class="welcome-box">
+        <h1>🎁 Birthday Surprise</h1>
+        <p>Do you want to accept this birthday surprise? ❤️</p>
+
+        <button onclick="acceptSurprise()">Yes 💖</button>
+        <button id="noBtn" onclick="moveButton()">No 😢</button>
+    </div>
+</div>
+
+<div class="hearts">
+
+<span style="left:5%;animation-delay:0s;">❤️</span>
+<span style="left:12%;animation-delay:2s;">🌸</span>
+<span style="left:20%;animation-delay:4s;">💖</span>
+<span style="left:30%;animation-delay:1s;">✨</span>
+<span style="left:40%;animation-delay:3s;">🩷</span>
+<span style="left:50%;animation-delay:5s;">🌹</span>
+<span style="left:60%;animation-delay:2s;">💞</span>
+<span style="left:70%;animation-delay:6s;">🫶</span>
+<span style="left:80%;animation-delay:4s;">💕</span>
+<span style="left:90%;animation-delay:1s;">🎀</span>
+<span style="left:15%;animation-delay:7s;">🌷</span>
+<span style="left:35%;animation-delay:8s;">💘</span>
+<span style="left:55%;animation-delay:5s;">🌺</span>
+<span style="left:75%;animation-delay:9s;">💝</span>
+<span style="left:95%;animation-delay:3s;">🩵</span>
+
+</div>
+
+<header>
+
+<h1>Happy Birthday, Leeloo! ❤️</h1>
+<p>Made with Love, Just For You</p>
+
+<a href="#memories">
+    <button onclick="showMemories()">A Glimpse of You ❤️</button>
+</a>
+
+</header>
+
+<section id="memories">
+
+<h2>✨ Here’s the moon I see, and it shines ✨</h2>
+
+<div class="gallery">
+
+        <div class="memory-card">
+
+        <video controls>
+            <source src="assets/video1.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay">
+            🔒
+            <p>Click "A Glimpse of You"</p>
+        </div>
+
+    </div>
+
+    <div class="memory-card">
+
+        <img src="assets/photo1.JPG" alt="Memory 2">
+
+        <div class="overlay">
+            🔒
+            <p>Click "A Glimpse of You"</p>
+        </div>
+
+    </div>
+
+    <div class="memory-card">
+
+        <video controls>
+            <source src="assets/video2.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay">
+            🔒
+            <p>Click "A Glimpse of You"</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="letter">
+
+    <h2>💌 A Letter For You</h2>
+
+    <button onclick="showLetter()" class="letter-btn">
+        Open My Letter ❤️
+    </button>
+
+    <div id="letterBox" class="letter-box">
+
+    <div class="letter-content">
+
+        <p>
+        Happy Birthday, Myy! 🎂<br><br>
+
+        Thank you for making every day brighter.
+        Every moment with you is a memory I cherish.
+        <br><br>
+        May your smile always shine,
+        may all your dreams come true,
+        and may this year bring you endless happiness.
+        <br><br>
+        I hope your worries fade away and your heart is filled with joy and peace.
+        <br><br>
+        I like you more than words can explain.
+        ❤️
+        <br>
+        With all my love,
+        <br>
+        <strong>-T.C</strong>
+        <br>
+        <span class="PS">PS: sorry if this letter is a bit cheesy and too much, but I just wanted to express how much you mean to me. This is ME. </span>
+        </p>
+
+    </div>
+
+    <div class="letter-overlay">
+        🔒
+        <p>Click "Open My Letter"</p>
+    </div>
+
+</div>
+
+</section>
+
+</section>
+
+<div class="buttons">
+
+<button onclick="toggleMusic()">
+🎵 Play / Pause Music
+</button>
+
+<button onclick="showGift()">
+🎁 Surprise
+</button>
+
+</div>
+
+<div id="gift" class="popup">
+
+<div class="popup-content">
+
+<h2>🌷</h2>
+
+<h1>The Moon is Beautiful, isn't it?</h1>
+<p class="love">(I LOVE YOU ❤️)</p>
+<br>
+You came into my life when I least expected it, and you've become the best part of it.
+<br>
+Happiest Birthday to My Dearest.
+
+</p>
+
+<br><br>
+
+<div class="irl-gift">
+
+<h2>🎁 Did you receive my IRL gift?</h2>
+
+<button onclick="giftYes()">
+Yes ❤️
+</button>
+
+<button onclick="giftNo()">
+No 😢
+</button>
+
+<p id="giftAnswer"></p>
+
+</div>
+
+<button onclick="closeGift()">
+Close
+</button>
+
+
+</div>
+
+</div>
+
+<div id="voucherPopup" class="popup">
+
+    <div class="voucher-popup-content">
+
+        <button class="close-voucher" onclick="closeVoucher()">✕</button>
+
+        <h2>🎁 Here's Your Voucher!</h2>
+
+        <p>
+            Since you haven't received your gift yet,
+            here's your voucher.
+        </p>
+
+        <div class="voucher-image-container">
+            <img src="assets/voucher.png" class="voucher-preview" alt="Voucher">
+        </div>
+
+        <p class="voucher-note">
+            Note: ipakita lang ni basin asa na branch pero dapat magpareserve daan para sa slot hehe call nalang ikaw here (09544702488)
+            <br>
+            late nako na remember na dili diay ka ganahan nay magtats lain sa imuha so idk e opt-up nalang ang massage? :D
+            <br>
+            2 na kabuok para naa kay kauban pili nalang ka sa imuha fam dra ^^
+            <br>
+            idk sad if gamiton nimo ang voucher pero if ever, enjoy lang hehe
+        </p>
+
+        <button onclick="closeVoucher()">
+            Close
+        </button>
+
+    </div>
+
+</div>
+<audio id="music" loop>
+
+<source src="assets/music2.mp3">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

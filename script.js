@@ -1,0 +1,81 @@
+const music = document.getElementById("music");
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
+
+function showGift(){
+
+document.getElementById("gift").style.display="flex";
+
+}
+
+function closeGift(){
+
+document.getElementById("gift").style.display="none";
+
+}
+function acceptSurprise() {
+
+    document.getElementById("welcome").style.display = "none";
+
+    const music = document.getElementById("music");
+
+    music.play();
+
+}
+
+function moveButton(){
+
+    const btn = document.getElementById("noBtn");
+
+    btn.style.position="absolute";
+
+    btn.style.left=Math.random()*80+"%";
+
+    btn.style.top=Math.random()*80+"%";
+}
+
+function showMemories(){
+
+    document.querySelectorAll(".memory-card")
+        .forEach(card=>{
+            card.classList.add("show");
+        });
+
+}
+
+function showLetter(){
+    document.getElementById("letterBox").classList.add("show");
+}
+function giftYes(){
+
+    document.getElementById("giftAnswer").innerHTML =
+    "Nice try 👍 You should receive it first before you can see it!";
+
+}
+
+
+function giftNo(){
+
+    document.getElementById("voucherPopup").style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+}
+
+function closeVoucher(){
+
+    document.getElementById("voucherPopup").style.display = "none";
+    document.body.style.overflow = "auto";
+
+}
